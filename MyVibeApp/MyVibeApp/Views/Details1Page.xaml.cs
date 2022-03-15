@@ -10,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MyVibeApp.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class HomePage : ContentPage
+    public partial class Details1Page : ContentPage
     {
-        public HomePage()
+        public Details1Page()
         {
             InitializeComponent();
-          
         }
     }
 }

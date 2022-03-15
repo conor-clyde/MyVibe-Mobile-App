@@ -15,6 +15,7 @@ namespace MyVibeApp
             //Routing.RegisterRoute(nameof(LoginPage), typeof(LoginPage));
             Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
             Routing.RegisterRoute(nameof(ResetPassPage), typeof(ResetPassPage));
+            Routing.RegisterRoute(nameof(Details1Page), typeof(Details1Page));
             //Routing.RegisterRoute(nameof(HomePage), typeof(HomePage));
 
         }

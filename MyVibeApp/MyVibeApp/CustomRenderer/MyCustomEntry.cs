@@ -7,7 +7,5 @@ namespace MyVibeApp.CustomRenderer
 {
     public class MyCustomEntry : Entry
     {
-
-
     }
 }

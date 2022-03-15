@@ -6,27 +6,21 @@ using Xamarin.Forms;
 
 namespace MyVibeApp.ViewModels
 {
-    class HomeViewModel : BaseViewModel
+    class Details1ViewModel : BaseViewModel
     {
         public Command LogOutCommand { get; }
-        public Command CreateCommand { get; }
 
-        public HomeViewModel()
+        public Details1ViewModel()
         {
-            Title = "Home";
+            Title = "Details";
             LogOutCommand = new Command(LogOutClicked);
-            CreateCommand = new Command(CreateClicked);
         }
 
         private async void LogOutClicked(object obj)
         {
+            Shell.Current.CurrentPage.Navigation.RemovePage(Shell.Current.CurrentPage);
             
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-        }
-
-        private async void CreateClicked(object obj)
-        {
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}/{nameof(Details1Page)}");
         }
 
     }

@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 xmlns:vm="clr-namespace:MyVibeApp.ViewModels" xmlns:local="clr-namespace:MyVibeApp.CustomRenderer"
+			 x:Class="MyVibeApp.Views.Details1Page"
+			 Title="{Binding Title}">
+
+
+    <ContentPage.BindingContext>
+        <vm:Details1ViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Log out" Command="{Binding LogOutCommand}"/>
+    </ContentPage.ToolbarItems>
+
+    <StackLayout Background="LightGray">
+        <Grid>
+
+            <StackLayout>
+                <Frame Margin="15, 20, 15, 20" BackgroundColor="#2A3D66" HeightRequest="140" HasShadow="True" >
+                    <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                        <Label Text="General Info" FontSize="40" TextColor="#D789D7" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,0,0,0" />
+                        <Label Text="Enter general information so that people know how to refer to you!" TextColor="White" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="15, 170, 15, 0">
+                <Frame HeightRequest="470">
+                    <StackLayout>
+
+
+
+                        <StackLayout>
+                            <Frame BackgroundColor="White" BorderColor="DarkGray" CornerRadius="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 15, 0, 15">
+                                <StackLayout Orientation="Horizontal">
+                                    <local:MyCustomEntry Placeholder="Nickname" TextColor="#9D65C9" HorizontalOptions="FillAndExpand" Margin="25, 0, 25, 0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Margin="0, 0, 0, 0">
+                            <Frame BackgroundColor="White" BorderColor="DarkGray" CornerRadius="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 15, 0, 15">
+                                <StackLayout Orientation="Horizontal">
+                                    <local:MyCustomEntry Placeholder="Pronouns" TextColor="#9D65C9" HorizontalOptions="FillAndExpand" Margin="25, 0, 25, 0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Frame BackgroundColor="White" BorderColor="DarkGray" CornerRadius="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 15, 0, 15">
+                                <StackLayout Orientation="Horizontal">
+                                    <local:MyCustomEntry Placeholder="Age" TextColor="#9D65C9" HorizontalOptions="FillAndExpand" Margin="25, 0, 25, 0"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout Margin="0,0,0,0" VerticalOptions="EndAndExpand">
+                            <Label Text="Complete the above fields, then continue!" FontSize="Body" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                            <Button Text="Continue" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#5D54A4" TextColor="White" FontAttributes="Bold" CornerRadius="50" Command="{Binding CreateCommand}" Margin="0, 10, 0, 10"/>
+                        </StackLayout>
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+
+        </Grid>
+    </StackLayout>
+</ContentPage>

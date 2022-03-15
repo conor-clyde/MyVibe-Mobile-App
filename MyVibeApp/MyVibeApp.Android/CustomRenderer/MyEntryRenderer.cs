@@ -20,7 +20,6 @@ namespace MyVibeApp.Droid.CustomRenderer
     {
         public MyEntryRenderer(Context context) : base(context)
         {
-
         }
          
         protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
@@ -28,13 +27,7 @@ namespace MyVibeApp.Droid.CustomRenderer
             base.OnElementChanged(e);
 
             if(Control !=null)
-            {
                 Control.SetBackgroundColor(Android.Graphics.Color.Transparent);
-            }
-
         }
-
-        
-
     }
 }

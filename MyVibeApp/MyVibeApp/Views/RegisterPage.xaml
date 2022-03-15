@@ -19,7 +19,7 @@
             </StackLayout>
 
             <StackLayout Margin="15, 200, 15, 0">
-                <Frame BackgroundColor="White" HeightRequest="450" HorizontalOptions="FillAndExpand" HasShadow="True">
+                <Frame BackgroundColor="White" HeightRequest="440" HorizontalOptions="FillAndExpand" HasShadow="True">
                     <StackLayout>
                         <StackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="SIGN UP" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>

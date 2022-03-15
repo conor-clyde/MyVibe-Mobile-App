@@ -22,7 +22,7 @@
         </StackLayout>
 
             <StackLayout Margin="15, 200, 15, 0">
-                <Frame BackgroundColor="White" HeightRequest="450" HorizontalOptions="FillAndExpand" HasShadow="True">
+                <Frame BackgroundColor="White" HeightRequest="440" HorizontalOptions="FillAndExpand" HasShadow="True">
                     <StackLayout>
                         <StackLayout HorizontalOptions="CenterAndExpand">
                             <Label Text="SIGN IN" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
@@ -35,7 +35,7 @@
                                 </StackLayout>
                             </Frame>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" CornerRadius="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 20, 0, 20">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" CornerRadius="50" HorizontalOptions="FillAndExpand" Padding="0" Margin="0, 10, 0, 10">
                                 <StackLayout Orientation="Horizontal">
                                     <local:MyCustomEntry  Placeholder="Password" IsPassword="True" TextColor="#9D65C9" HorizontalOptions="FillAndExpand" Margin="25, 0, 25, 0"/>
                                 </StackLayout>

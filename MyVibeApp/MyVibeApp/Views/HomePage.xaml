@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MyVibeApp.Views.HomePage"
-             xmlns:vm="clr-namespace:MyVibeApp.ViewModels">
-             
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="MyVibeApp.Views.HomePage"
+             Title="{Binding Title}"
+			 xmlns:vm="clr-namespace:MyVibeApp.ViewModels" xmlns:local="clr-namespace:MyVibeApp.CustomRenderer">
+
     <ContentPage.BindingContext>
         <vm:HomeViewModel />
     </ContentPage.BindingContext>
@@ -11,12 +12,59 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Log out" Command="{Binding LogOutCommand}"/>
     </ContentPage.ToolbarItems>
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+
+    <StackLayout Background="White">
+        <Grid>
+            
+            <StackLayout>
+                <Frame BackgroundColor="LightGray" Padding="0" HeightRequest="420" VerticalOptions="Start">
+                    <Frame Margin="15, 20, 15, 0" BackgroundColor="#2A3D66" HeightRequest="240" HasShadow="True" Padding="0, 10, 0, 0">
+                        <Grid HorizontalOptions="FillAndExpand" VerticalOptions="Start">
+                            <StackLayout Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Image Source="ThinkIcon.png" HeightRequest="80" HorizontalOptions="FillAndExpand"/>
+                                <Label Text="1. Think about what" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,0,0,0" />
+                                <Label Text="makes you, you!" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" Margin="0,-6,0,0" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Image Source="WriteIcon.png" HeightRequest="80" HorizontalOptions="FillAndExpand"/>
+                                <Label Text="2. Follow our app to" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                <Label Text="talk about yourself!" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  Margin="0,-6,0,0" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Row="1" Margin="0, 10, 0, 0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Image Source="ReviewIcon.png" HeightRequest="80" />
+                                <Label Text="3. Review what you've" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                <Label Text="said about yourself!" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  Margin="0,-6,0,0" />
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Grid.Row="1" Margin="0, 10, 0, 0" Orientation="Vertical" HorizontalOptions="CenterAndExpand">
+                                <Image Source="ShareIcon.png" HeightRequest="80"/>
+                                <Label Text="4. No need for retyping" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" />
+                                <Label Text="your intro, Share your vibe!" TextColor="white" FontSize="14" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center"  Margin="0,-6,0,0" />
+                            </StackLayout>
+                        </Grid>
+                    </Frame>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout Margin="0, 340, 0, 0">
+                <Frame CornerRadius="60"  HasShadow="False" HeightRequest="600">
+                    <StackLayout>
+                        <Label Text="Get Started Now!" TextColor="Black" FontSize="Medium" FontAttributes="Bold" HorizontalTextAlignment="Center"/>
+                        
+                        <Label Text="Start from scratch!" FontSize="Body" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Button Text="Create Your Vibe" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#5D54A4" TextColor="White" FontAttributes="Bold" CornerRadius="50" Command="{Binding CreateCommand}" Margin="0, 10, 0, 10"/>
+
+                        <Label Text="Already created a vibe? Edit it here!" FontSize="Body" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Button Text="Edit Your Vibe" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#5D54A4" TextColor="White" FontAttributes="Bold" CornerRadius="50" Command="{Binding LoginCommand}" Margin="0, 10, 0, 10"/>
+
+                        <Label Text="Want to see your vibe? Click below!" FontSize="Body" HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                        <Button Text="View Your Vibe" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="#5D54A4" TextColor="White" FontAttributes="Bold" CornerRadius="50" Command="{Binding LoginCommand}" Margin="0, 10, 0, 10"/>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+            
+        </Grid>
+    </StackLayout>
 </ContentPage>

@@ -25,7 +25,7 @@ namespace MyVibeApp.ViewModels
 
         private async void OnLoginClicked(object obj)
         {
-            await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+            await Shell.Current.GoToAsync($"//HomePage");
         }
 
         private async void OnSignUpClicked(object obj)
